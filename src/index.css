@@ -1,0 +1,32 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLOR VARIABLES */
+:root {
+  --primary: #3fb599;
+  --text-grey: #666;
+  --primary-font: "Source Sans 3", sans-serif;
+  --brand-font: "Joti One", serif;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
+  --fs-p: 1rem;
+  --fs-sm: 0.8rem;
+  --fs-nav: 1.2rem;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,101 @@
+.note {
+  position: relative;
+  height: 10rem;
+  flex: 0 0 30%;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px grey;
+}
+
+@media (max-width: 768px) {
+  .note {
+    height: auto;
+    flex: 0 0 45%;
+    gap: 0.5rem;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .note {
+    flex: 0 0 90%;
+    gap: 0.5rem;
+    margin: 10px auto;
+  }
+}
+
+/* NOTE HEADER */
+.note .note-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-h4);
+  border-bottom: 2px solid grey;
+  padding-bottom: 0.3rem;
+}
+
+@media (max-width: 450px) {
+  .note .note-title {
+    font-size: var(--fs-p);
+  }
+}
+
+.note .note-icons img {
+  height: var(--fs-h4);
+  margin: 0 0.3rem;
+  filter: invert(0.5);
+  transition: filter 0.2s ease;
+}
+
+.note .note-icons img:hover {
+  filter: invert(0);
+}
+
+@media (max-width: 450px) {
+  .note .note-icons img {
+    height: var(--fs-p);
+  }
+}
+
+/* NOTE CONTENT */
+.note .content {
+  font-size: var(--fs-p);
+  padding-top: 0.3rem;
+}
+
+@media (max-width: 450px) {
+  .note .content {
+    font-size: var(--fs-sm);
+  }
+}
+
+/* CREATE Button */
+/* CREATE BUTTON */
+.note #create-btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 50%;
+  background-color: orange;
+  padding: 10px;
+  right: 10%;
+  bottom: -15%;
+  opacity: 1;
+  box-shadow: 0 0 4px black;
+}
+
+.note #create-btn:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .note #create-btn {
+    right: 10%;
+    bottom: -15%;
+    height: 40px;
+  }
+}

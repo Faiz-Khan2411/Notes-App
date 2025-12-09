@@ -1,0 +1,6 @@
+/* NOTES GRID */
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}

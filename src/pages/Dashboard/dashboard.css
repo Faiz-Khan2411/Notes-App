@@ -1,0 +1,39 @@
+/* MAIN WRAPPER */
+.dashboard-page {
+  background-color: #82b99c;
+}
+
+.dashboard-page .main-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  font-family: var(--primary-font);
+}
+
+@media (max-width: 450px) {
+  .dashboard-page .main-container {
+    background-color: #b0d2c4;
+  }
+}
+
+/* RIGHT CONTAINER */
+.dashboard-page .right-container {
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27.5%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page .right-container {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .dashboard-page .right-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

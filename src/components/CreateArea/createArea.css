@@ -1,0 +1,103 @@
+.create-area {
+  position: relative;
+  height: 10rem;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 10px;
+  box-shadow: 0 5px 5px grey;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .create-area {
+    height: auto;
+    flex: 0 0 45%;
+    gap: 0.5rem;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .create-area {
+    margin: 10px auto;
+  }
+}
+
+/* NOTE HEADER */
+.create-area .note-header > .note-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-h4);
+  border-bottom: 2px solid grey;
+  padding-bottom: 0.3rem;
+}
+
+@media (max-width: 450px) {
+  .create-area .note-title {
+    font-size: var(--fs-p);
+  }
+}
+
+/* NOTE CONTENT */
+.create-area .note-title,
+.create-area .content {
+  padding-top: 0.3rem;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.create-area textarea {
+  margin-top: 0.5rem;
+  padding: auto 0;
+}
+
+.create-area .content {
+  font-size: var(--fs-p);
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 450px) {
+  .create-area .content {
+    font-size: var(--fs-sm);
+  }
+}
+
+/* CREATE Button */
+/* CREATE BUTTON */
+.create-area #create-btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: orange;
+  padding: 10px;
+  right: 10%;
+  bottom: -15%;
+  opacity: 1;
+  box-shadow: 0 0 4px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-area #create-btn:hover {
+  opacity: 0.7;
+}
+
+.create-area #create-btn img {
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .create-area #create-btn {
+    right: 10%;
+    bottom: -15%;
+    height: 40px;
+  }
+}
