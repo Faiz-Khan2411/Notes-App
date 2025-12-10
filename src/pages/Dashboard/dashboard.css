@@ -37,3 +37,15 @@
     width: 100%;
   }
 }
+
+.dashboard-page .right-container .notes-section {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 450px) {
+  .dashboard-page .right-container .notes-section {
+    gap: 1rem;
+  }
+}

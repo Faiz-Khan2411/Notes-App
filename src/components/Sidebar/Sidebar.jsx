@@ -8,7 +8,7 @@ function Sidebar({ open }) {
     <section className={`sidebar ${open ? "open" : ""}`}>
       <div className="sidebar-profile">
         <img src={personCircle} alt="profile photo" />
-        <p>Joanna Lisburg</p>
+        <p>Anonymous</p>
       </div>
 
       <nav>
