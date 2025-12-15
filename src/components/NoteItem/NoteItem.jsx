@@ -9,7 +9,7 @@ function NoteItem(props) {
   }
 
   return (
-    <div className="note card">
+    <div className="note">
       <div className="note-header">
         <div className="note-title">{props.title}</div>
         <div className="note-icons">

@@ -40,12 +40,25 @@
 
 .dashboard-page .right-container .notes-section {
   height: auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 1rem; */
+}
+
+@media (max-width: 768px) {
+  .dashboard-page .right-container .notes-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 450px) {
   .dashboard-page .right-container .notes-section {
-    gap: 1rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .dashboard-page .right-container .notes-section > .create-area {
+    grid-column: span 2;
   }
 }
