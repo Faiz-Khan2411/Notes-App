@@ -38,14 +38,16 @@ function CreateArea(props) {
           type="text"
           placeholder="Title"
           onChange={handleChange}
+          value={note.title}
         />
       </div>
       <textarea
         className="content"
         name="content"
-        rows={3}
+        rows={7}
         onChange={handleChange}
         placeholder="Description"
+        value={note.content}
       ></textarea>
       <button type="submit" id="create-btn" onClick={handleClick}>
         <img src={createButton} alt="create icon" />

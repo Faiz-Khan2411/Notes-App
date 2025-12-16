@@ -1,6 +1,6 @@
 .note {
   position: relative;
-  height: 10rem;
+  height: 15rem;
   background-color: whitesmoke;
   border-radius: 20px;
   padding: 20px;
@@ -10,11 +10,12 @@
   overflow-y: auto;
   overflow-x: hidden;
   margin: 20px 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge (legacy) */
 }
 
 @media (max-width: 768px) {
   .note {
-    height: 10rem;
     gap: 0.5rem;
     margin: 10px;
   }
@@ -22,10 +23,15 @@
 
 @media (max-width: 450px) {
   .note {
-    gap: 0.5rem;
+    gap: 0.4rem;
     height: 15rem;
     margin: 0;
+    padding: 12px;
   }
+}
+
+.note::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 /* NOTE HEADER */
@@ -35,6 +41,14 @@
   font-size: var(--fs-h4);
   border-bottom: 2px solid grey;
   padding-bottom: 0.3rem;
+  /* height: 1.7rem; */
+  /* overflow: auto; */
+}
+
+@media (max-width: 450px) {
+  .note .note-header {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 450px) {
@@ -67,10 +81,13 @@
   word-wrap: break-word;
   overflow-wrap: break-word; /* modern browsers */
   white-space: normal;
+  height: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width: 450px) {
   .note .content {
+    padding-top: 0;
     font-size: var(--fs-sm);
   }
 }
@@ -79,4 +96,45 @@
 .note .note-icons button {
   border: none;
   outline: none;
+}
+
+.date-time {
+  text-align: center;
+  justify-self: flex-end;
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 450px) {
+  .date-time {
+    font-size: 0.6rem;
+  }
+}
+
+/* Desktop scrollbar */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+@media (max-width: 450px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }

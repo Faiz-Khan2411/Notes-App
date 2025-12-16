@@ -2,6 +2,7 @@ import React from "react";
 import "./noteItem.css";
 import deleteButton from "../../assets/trash-fill.svg";
 import createButton from "../../assets/plus.svg";
+import { format } from "date-format-parse";
 
 function NoteItem(props) {
   function handleClick() {
@@ -19,6 +20,10 @@ function NoteItem(props) {
         </div>
       </div>
       <div className="content">{props.content}</div>
+      <div className="date-time">
+        <hr />
+        {format(new Date(), "DD-MMM, YYYY HH:mm a")}
+      </div>
     </div>
   );
 }

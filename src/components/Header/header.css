@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid grey;
-  z-index: 2;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -42,9 +42,9 @@
   background-color: whitesmoke;
 }
 
-.right-bar-header input:focus{
+.right-bar-header input:focus {
   border: none;
-  outline: 2px solid #3291B6;
+  outline: 2px solid #3291b6;
 }
 
 @media (max-width: 768px) {
@@ -57,7 +57,7 @@
 .right-bar-header button {
   border: none;
   outline: none;
-  background-color: #b0d2c4;
+  background-color: #82b99c;
 }
 
 @media (max-width: 450px) {
@@ -83,13 +83,11 @@
   }
 }
 
-.burger-icon{
+.burger-icon {
   transition: all 0.3s ease;
 }
 
-.burger-icon.open{
+.burger-icon.open {
   transform: rotate(180deg);
   opacity: 0.8;
 }
-
-
